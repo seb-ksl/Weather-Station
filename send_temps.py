@@ -19,8 +19,8 @@ stderr_handler.setLevel(logging.WARNING)
 logger.addHandler(log_file_handler)
 logger.addHandler(stderr_handler)
 
-IN_SENSOR = ""
-OUT_SENSOR = "28-031644179aff"
+IN_SENSOR = "28-xxxxxxxxxxxx"
+OUT_SENSOR = "28-xxxxxxxxxxxx"
 DB_NAME = "weatherman"
 DB_USER = "weatherman"
 UPDATE_INTERVAL = 599
