@@ -30,7 +30,7 @@ iptables -A OUTPUT -p tcp --dport 22 -j ACCEPT
 iptables -A OUTPUT -p tcp --dport 80 -j ACCEPT
 iptables -A OUTPUT -p tcp --dport 443 -j ACCEPT
 iptables -A OUTPUT -p udp --dport 53 -j ACCEPT
-iptables -A OUTPUT -p tcp --dport 53 -j ACCEPT
+iptables -A OUTPUT -p udp --dport 123 -j ACCEPT
 iptables -t filter -P INPUT DROP
 iptables -t filter -P FORWARD DROP
 iptables -t filter -P OUTPUT DROP
@@ -72,6 +72,7 @@ ip6tables -A OUTPUT -p tcp --dport 80 -j ACCEPT
 ip6tables -A OUTPUT -p tcp --dport 443 -j ACCEPT
 ip6tables -A OUTPUT -p udp --dport 53 -j ACCEPT
 ip6tables -A OUTPUT -p tcp --dport 53 -j ACCEPT
+ip6tables -A OUTPUT -p udp --dport 123 -j ACCEPT
 ip6tables -t filter -P INPUT DROP
 ip6tables -t filter -P FORWARD DROP
 ip6tables -t filter -P OUTPUT DROP
