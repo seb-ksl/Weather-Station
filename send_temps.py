@@ -65,7 +65,7 @@ def read_temps(sensor_files):
         else:
             cat = handle.read().split("\n")
             if cat[0].endswith("YES"):
-                temps[sensor] = round(float(cat[1][-5:])/1000, 1)
+                temps[sensor] = round(float(cat[1].split("=")[1])/1000, 1)
             handle.close()
 
     return temps
